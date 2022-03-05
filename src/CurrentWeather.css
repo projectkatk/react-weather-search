@@ -1,0 +1,7 @@
+.currentTemperature {
+    font-size: 2rem;
+}
+
+.celsius, .fahrenheit {
+    cursor: pointer;
+}
