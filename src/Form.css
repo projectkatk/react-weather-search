@@ -1,0 +1,9 @@
+.btn {
+    background: var(--btn-gradient);
+    text-shadow: var(--text-shadow);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    transition: all 0.2s ease;
+}

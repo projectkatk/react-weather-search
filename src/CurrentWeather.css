@@ -1,3 +1,12 @@
+.currentWeatherSection {
+    color: #fff;
+    text-shadow: var(--text-shadow);
+}
+
+.currentDate {
+    color: #ffffffb3;
+}
+
 .currentTemperature {
     font-size: 2rem;
 }

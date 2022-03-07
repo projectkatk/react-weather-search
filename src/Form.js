@@ -1,3 +1,4 @@
+import "./Form.css"
 
 export default function Form(props) {
     return (
@@ -11,7 +12,7 @@ export default function Form(props) {
                 onChange={props.handleSearch}
                 placeholder="City, Country (e.g. Paris, France)"
             />
-            <button className="btn mt-0 w-50 bg-black p-2 border-0 mx-3 fw-bold text-white">Search</button>        
+            <button className="btn mt-0 w-50 p-2 border-0 mx-3 fw-bold text-white shadow">Search</button>        
             
         </form>          
     )

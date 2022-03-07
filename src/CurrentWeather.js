@@ -27,6 +27,30 @@ export default function CurrentWeather(props) {
         document.querySelector(offClass).style.fontWeight="300";
     }
 
+    function determineTimeForBg () {
+        if(amOrPm === 'AM') {
+            if(timeForBgColor < 5 || timeForBgColor === 12) {
+                return '#00000077'
+            } else {
+                return '#87cfeb57'
+            }
+        }else {
+            if(timeForBgColor < 5 || timeForBgColor === 12) {
+                return '#87cfeb57'
+            } else {
+                return '#00000077'
+            }
+        }
+    }
+
+    const timeForBgColor = parseInt(props.currentTime.slice(-8,-6));
+    const amOrPm = props.currentTime.slice(-2);
+    const styleCurrentBgColor = {
+        backgroundColor: determineTimeForBg()           
+    }  
+
+    
+
     function roundNumbers(data) {
         return Math.round(data)
     }
@@ -38,13 +62,13 @@ export default function CurrentWeather(props) {
     if(props.visibility) {
         return (
             <div>
-                <h3 className="text-center">{props.city}
+                <h2 className="text-center text-white fw-bold">{props.city}
                 {props.visibility && <span className="badge badge-pill bg-info rounded mx-2 px-2">Now</span>}
-                </h3> 
-                {props.visibility && <p className="currentDate text-center">{props.currentTime}</p>}            
+                </h2> 
+                {props.visibility && <p className="currentDate text-center" >{props.currentTime}</p>}            
 
                 <div className="row">
-                    <div className="col-12 col-lg-6 text-center bg-light">
+                    <div className="col-12 col-lg-6 text-center currentWeatherSection" style={styleCurrentBgColor}>
                         <img src={`https://www.weatherbit.io/static/img/icons/${props.weatherData.icon}.png`} alt="weatherIcon" />
                         <p className="currentTemp">
                             <span className="fw-bold currentTemperature">{convertTemp}</span>

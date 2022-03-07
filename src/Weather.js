@@ -46,7 +46,7 @@ export default function Weather(props) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        setVisibility(true);
+        setVisibility(true);       
         getCurrentWeather();       
     }   
 
@@ -56,9 +56,7 @@ export default function Weather(props) {
 
     let currentTime = new Date().toLocaleString("en-US", {weekday: 'short', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: weatherData.timezone}); // get local time through conversion
 
-
-    
-    if(weatherData.ready) {
+   if(weatherData.ready) {
         return (
             <div className="Weather shadow rounded py-5">
                 <Form 
