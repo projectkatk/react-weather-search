@@ -8,6 +8,7 @@ export default function CurrentWeather(props) {
    
     useEffect(() => {
         setConvertTemp(Math.round(props.weatherData.temperature));    
+        console.log('effect used')
     }, [props.weatherData])
 
     //temperature in celcius handle click
@@ -32,11 +33,11 @@ export default function CurrentWeather(props) {
             if(timeForBgColor < 5 || timeForBgColor === 12) {
                 return '#00000077'
             } else {
-                return '#87cfeb57'
+                return '#74b9d4be'
             }
         }else {
             if(timeForBgColor < 5 || timeForBgColor === 12) {
-                return '#87cfeb57'
+                return '#74b9d4be'
             } else {
                 return '#00000077'
             }
@@ -47,9 +48,7 @@ export default function CurrentWeather(props) {
     const amOrPm = props.currentTime.slice(-2);
     const styleCurrentBgColor = {
         backgroundColor: determineTimeForBg()           
-    }  
-
-    
+    }      
 
     function roundNumbers(data) {
         return Math.round(data)
@@ -69,7 +68,7 @@ export default function CurrentWeather(props) {
 
                 <div className="row">
                     <div className="col-12 col-lg-6 text-center currentWeatherSection" style={styleCurrentBgColor}>
-                        <img src={`https://www.weatherbit.io/static/img/icons/${props.weatherData.icon}.png`} alt="weatherIcon" />
+                        <img src={props.weatherData.icon} alt="weatherIcon" />
                         <p className="currentTemp">
                             <span className="fw-bold currentTemperature">{convertTemp}</span>
                             <span className="celsius" onClick={handleClickCel}> °C</span>

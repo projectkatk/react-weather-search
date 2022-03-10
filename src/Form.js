@@ -10,7 +10,7 @@ export default function Form(props) {
                 className="w-75 mx-3 p-2 my-2 border-0 shadow rounded"
                 type="search"
                 onChange={props.handleSearch}
-                placeholder="City, Country (e.g. Paris, France)"
+                placeholder="Enter a city name"
             />
             <button className="btn mt-0 w-50 p-2 border-0 mx-3 fw-bold text-white shadow">Search</button>        
             
