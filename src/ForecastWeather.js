@@ -9,11 +9,9 @@ export default function ForecastWeather(props) {
 
     useEffect(() => {
         setLoaded(false)
-        console.log('forecast effect used')
     }, [props.city])
 
     function handleResponse(response) {
-        console.log(response.data.forecast)
         setForecast(response.data.forecast.forecastday)
         setLoaded(true)
     }

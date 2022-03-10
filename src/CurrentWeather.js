@@ -7,8 +7,8 @@ export default function CurrentWeather(props) {
 
    
     useEffect(() => {
-        setConvertTemp(Math.round(props.weatherData.temperature));    
-        console.log('effect used')
+        setConvertTemp(Math.round(props.weatherData.temperature));
+        changeColor('.celsius', '.fahrenheit')    
     }, [props.weatherData])
 
     //temperature in celcius handle click
@@ -71,7 +71,7 @@ export default function CurrentWeather(props) {
                         <img src={props.weatherData.icon} alt="weatherIcon" />
                         <p className="currentTemp">
                             <span className="fw-bold currentTemperature">{convertTemp}</span>
-                            <span className="celsius" onClick={handleClickCel}> °C</span>
+                            <span className="celsius" onClick={handleClickCel} default> °C</span>
                             <span> | </span>
                             <span className="fahrenheit" onClick={handleClickFeh}>°F</span>
                         </p>
