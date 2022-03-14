@@ -14,3 +14,36 @@
 .celsius, .fahrenheit {
     cursor: pointer;
 }
+
+.otherInfo {
+    background: #0a0b1323;
+}
+
+.humidity, .windSpeed, .uvStrength {
+    width: 200px;
+    min-width: 70px;
+    height: 120px;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    background: var(--bg-other-gradient);
+    box-shadow: 0.5px 0.5px 10px #e490fd1c;
+}
+
+.humidity:hover,
+.windSpeed:hover,
+.uvStrength:hover {
+    background: var(--hover-bg);
+}
+
+.otherInfo span {
+    font-size: 0.8rem;
+}
+
+@media (min-width: 600px) {
+    .humidity, 
+    .windSpeed, 
+    .uvStrength, 
+    .otherInfo span {
+        font-size: 1rem;
+    }
+}

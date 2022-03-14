@@ -1,14 +1,14 @@
 
 .Forecast .forecast-style {
     text-align: center;
-    border: 1px solid #fafafa3d;
+    border: 0.5px solid #fafafa0e;
     border-radius: 10px;
     padding: 20px;
     max-width: 70%;
 }
 
 .Forecast .forecast-style:hover {
-    background-color:#fafafa11;
+    background-color:var(--hover-bg);
 }
 
 .Forecast .dateConfig {

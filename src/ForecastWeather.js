@@ -43,7 +43,7 @@ export default function ForecastWeather(props) {
                     let getMonth = new Date(dailyForecast.date_epoch*1000).getMonth();
                     if(index < 3) {
                         return (
-                        <div className="col-sm-3 d-flex d-sm-block justify-content-around align-items-center forecast-style text-white mx-3 my-3" key={index}>
+                        <div className="col-sm-3 d-flex d-sm-block justify-content-around align-items-center forecast-style text-white mx-3 my-3 shadow" key={index}>
                             <div className="d-flex justify-content-center dateConfig">
                                 <span className="d-inline-block">{convertDay[getDay]}, </span>                                
                                 <p className="d-inline-block mb-1"> {getDate} {convertMonth[getMonth]}</p>   

@@ -33,11 +33,11 @@ export default function CurrentWeather(props) {
             if(timeForBgColor < 5 || timeForBgColor === 12) {
                 return '#00000077'
             } else {
-                return '#74b9d4be'
+                return '#bff1ef1f'
             }
         }else {
             if(timeForBgColor < 5 || timeForBgColor === 12) {
-                return '#74b9d4be'
+                return '#bff1ef1f'
             } else {
                 return '#00000077'
             }
@@ -77,16 +77,16 @@ export default function CurrentWeather(props) {
                         </p>
                         <p className="description">{props.weatherData.description}</p>
                     </div>
-                    <div className="col-12 col-lg-6 d-flex align-items-center justify-content-around text-light py-2 otherInfo bg-black">
-                        <p className="humidity mx-3 my-0 text-center">
+                    <div className="col-12 col-lg-6 d-flex align-items-center justify-content-around text-light py-3 otherInfo">
+                        <p className="humidity mx-3 my-0 text-center d-flex flex-column justify-content-center">
                             Humidity
                             <span className="d-block">{humidityResult} %</span>
                         </p>
-                        <p className="windSpeed mx-3 my-0 text-center">
+                        <p className="windSpeed mx-3 my-0 text-center d-flex flex-column justify-content-center">
                             Wind Speed
                             <span className="d-block">{windResult} m/s</span>
                         </p>
-                        <p className="uvStrength mx-3 my-0 text-center">
+                        <p className="uvStrength mx-3 my-0 text-center d-flex flex-column justify-content-center">
                             UV Strength
                             <span className="d-block">{uvResult}</span>
                         </p>

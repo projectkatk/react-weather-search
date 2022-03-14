@@ -1,7 +1,9 @@
 :root {
     --text-shadow:  1px 1px 5px #000000ab;   
     --bg-gradient: linear-gradient(15deg, #5a1336, #3b093b, #041e35, #241830);
+    --bg-other-gradient: linear-gradient(125deg, #8f22596c, #58095867, #041e355b, #1e053842);
     --btn-gradient: linear-gradient(105deg, #5a13378f, #9e1a9e7a, #0d5ca171, #7a53a181);
+    --hover-bg: #fafafa11;
 }
 
 * {
