@@ -20,6 +20,7 @@ export default function Weather(props) {
     const apiKey = '6cc56a1d52494b9faef23339221003';       
 
     function currentWeatherResponse(response) {
+        console.log(response)
         setWeatherData({
             ready: true,
             city:response.data.location.name,
