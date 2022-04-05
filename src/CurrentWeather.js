@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function CurrentWeather(props) {
     const [convertTemp, setConvertTemp] = useState("");
-
+    console.log(props.city)
    
     useEffect(() => {
         setConvertTemp(Math.round(props.weatherData.temperature));
@@ -61,10 +61,10 @@ export default function CurrentWeather(props) {
     if(props.visibility) {
         return (
             <div>
-                <h2 className="text-center text-white fw-bold">{props.city}
-                {props.visibility && <span className="badge badge-pill bg-info rounded mx-2 px-2">Now</span>}
-                </h2> 
-                {props.visibility && <p className="currentDate text-center" >{props.currentTime}</p>}            
+               <h2 className="text-center text-white fw-bold no-show">{props.city}
+               <span className="badge badge-pill bg-info rounded mx-2 px-2">Now</span>
+                </h2>
+                <p className="currentDate text-center" >{props.currentTime}</p>         
 
                 <div className="row">
                     <div className="col-12 col-lg-6 text-center currentWeatherSection" style={styleCurrentBgColor}>

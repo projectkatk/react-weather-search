@@ -14,7 +14,7 @@ function App() {
     <div className="container">
       <a href="./index.html"><img src={img} style={imgStyle} alt="myLogo" /></a>
       <h1 className="text-center text-white fw-bold mb-0 pb-4"> Weather App</h1>
-      <Weather defaultCity="paris"/>
+      <Weather defaultCity="greenwich"/>
       <Footer />        
     </div>
   );

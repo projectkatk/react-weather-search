@@ -20,7 +20,6 @@ export default function Weather(props) {
     const apiKey = '6cc56a1d52494b9faef23339221003';       
 
     function currentWeatherResponse(response) {
-        console.log(response)
         setWeatherData({
             ready: true,
             city:response.data.location.name,
@@ -47,11 +46,11 @@ export default function Weather(props) {
     function handleSubmit(e) {
         e.preventDefault();
         getCurrentWeather();
-        setVisibility(true);   
+        setTimeout(()=> setVisibility(true), 1000);
     }   
 
-    function handleSearch(e) {        
-        setCity(e.target.value);        
+    function handleSearch(e) {
+        setCity(e.target.value);
     }
 
     let currentTime = new Date(weatherData.time).toLocaleString("en-US", {weekday: 'short', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: weatherData.timezone}); // get local time through conversion
@@ -63,12 +62,13 @@ export default function Weather(props) {
                         handleSubmit={handleSubmit}
                         handleSearch={handleSearch}
                     />
-                    {visibility && <WeatherGroup 
+                    {visibility && 
+                    (<WeatherGroup 
                         visibility={visibility}
                         weatherData={weatherData}
                         currentTime={currentTime}
                         apiKey={apiKey}
-                    />}
+                    />)}
                                            
                 </div>
             );
