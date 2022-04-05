@@ -46,7 +46,7 @@ export default function Weather(props) {
     function handleSubmit(e) {
         e.preventDefault();
         getCurrentWeather();
-        setTimeout(()=> setVisibility(true), 1000);
+        setTimeout(()=> setVisibility(true), 500);
     }   
 
     function handleSearch(e) {
